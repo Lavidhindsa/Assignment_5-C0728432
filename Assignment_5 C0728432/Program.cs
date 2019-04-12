@@ -25,6 +25,7 @@ namespace Assignment_5_C0728432
             {
                 int x = 0;
                 while (Letters[x] != letter)
+
                 {
                     if (Letters[x++] == letter) return x;
                 }
