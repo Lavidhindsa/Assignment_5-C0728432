@@ -8,29 +8,35 @@ namespace Assignment_5_C0728432
 {
     class Program
     {
-        string[] Letters = new string[26] { "a", "b", "c", "d", "e", "f", "g", "i", "j", "k", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
-            public static void Main()
-            {
-                Program orange = new Program();
-                Console.WriteLine(orange.Gematria("universe"));
-            }
-            public int Gematria(string word)
-            {
-                int GematriaValue = 0;
-                for (int i = 0; i < word.Length; i++)
-                { GematriaValue += LetterValue(word[i].ToString()); }
-                return GematriaValue;
-            }
-            public int LetterValue(string letter)
-            {
-                int x = 0;
-                while (Letters[x] != letter)
+        static void  Main(string[] args)
+        {
+            Program a = new Program();
+            Console.WriteLine("the longest word is : ");
+            Console.WriteLine(a.MyFunctionA("Ada Lovelace wrote the first algorithm designed for processing by an Analytical Engine."));
+        }
 
-                {
-                    if (Letters[x++] == letter) return x;
-                }
-                return -1;
+        public int  MyFunctionA(string input)
+        {
+            //Write a C# program to find the longes word in a string.
+            string[] words = input.Split('');
+            int wordarrayLength = words.Length;
+
+            foreach (var wod in words)
+            {
+                //TODO
             }
+            // loop post condition: we now jave array wordsLength which contains the lengths of each word
+
+            string currentWord = words[0];
+            string nextWord;
+
+            for (int y = 0; y < words.Length - 1; y++)
+            {
+                currentWord = words[y];
+                nextWord = words[y + 1];
+                // TODO :Use an IF Statementr to make sure thet variable longestWord is always set to the Longest Word in the input string
+            }
+
         }
     }
-
+}
